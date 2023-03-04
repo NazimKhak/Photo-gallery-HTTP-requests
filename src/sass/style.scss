@@ -124,6 +124,7 @@ legend {
 body {
   max-width: 1600px;
   margin: auto;
+  position: relative;
 }
 .h1 {
   text-align: center;
@@ -184,10 +185,6 @@ body {
   margin: auto;
 }
 
-.photo-card {
-}
-.photo-card.img_setting {
-}
 .img_setting {
   width: 350px;
   height: 250px;
@@ -202,12 +199,53 @@ body {
 }
 .info.info-team {
 }
-.loadmore_btn {
+.btn_more {
+  top: 0;
+  font-size: 20px;
+  font-family: monospace;
+  color: #fff;
+  background: linear-gradient(to left, #f5af19, #f12711, #f5af19);
+  text-decoration: none;
+  padding: 20px 70px;
+  border-radius: 10px;
+  background-size: 200%;
+  transition: 0.5s;
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: block;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
-  font-size: larger;
+}
+
+.btn_more:focus {
+  color: aqua;
+  border: 2px solid rgba(112, 111, 211, 1);
+  box-shadow: 8px 8px 8px 1px rgb(58, 57, 110);
+  animation: anti-shadow 0.3s forwards;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.loadmore_btn::after {
+  content: ' ';
+  border: 0.3em solid #fff;
+  width: 1.2em;
+  height: 1.2em;
+  top: 18%;
+
+  border-radius: 1em;
+  left: 165px;
+  border-top-color: orange;
+  animation: spin 1.5s linear infinite;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }

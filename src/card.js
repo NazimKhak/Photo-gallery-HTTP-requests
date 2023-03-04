@@ -9,6 +9,8 @@ function renderCard(
   largeImageURL
 ) {
   return `
+  
+  <a href="${largeImageURL}">
 <div class="photo-card">
   <img src="${webformatURL}" class="img_setting" alt="${tags}" loading="lazy" />
   <div class="info">
@@ -26,5 +28,6 @@ function renderCard(
     </p>
   </div>
 </div>
+</a>
 `;
 }

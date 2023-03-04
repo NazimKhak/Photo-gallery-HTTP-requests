@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
     <link rel="stylesheet" href="./sass/style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.11.0/simple-lightbox.min.css"
+    />
   </head>
   <body>
     <h1 class="h1">Поиск картинок</h1>
@@ -67,8 +71,10 @@
       </form>
     </nav>
 
-    <ul class="gallery"></ul>
-    <button class="loadmore_btn">Показать еще</button>
-    <script src="./index.js" type="module"></script>
+    <div class="gallery"></div>
+    <button class="btn_more" id="button_add">
+      <span class="label">Показать еще</span>
+    </button>
+    <script src="./Main-module.js" type="module"></script>
   </body>
 </html>
