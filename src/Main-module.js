@@ -2,11 +2,14 @@ import renderCard from './card.js';
 import PhotosApiService from './Api.js';
 import LoadmoreButtonSettings from './loadmore_btn.js';
 import SimpleLightbox from 'simplelightbox';
-import simpleLightbox from 'simplelightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
 
-let lightbox = new SimpleLightbox('.gallery a', {
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
+var lightbox = new SimpleLightbox('.gallery a', {
   /* options */
+});
+lightbox.on('show.simplelightbox', function () {
+  // do something…
 });
 
 const refs = {
